@@ -1,1 +1,6 @@
-
+SELECT pages.page_id 
+FROM pages
+LEFT JOIN page_likes as likes
+ON pages.page_id = likes.page_id
+WHERE likes.page_id IS NULL
+ORDER BY likes.page_id ASC;
